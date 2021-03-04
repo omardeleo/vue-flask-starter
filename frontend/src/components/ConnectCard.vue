@@ -4,11 +4,11 @@
       <h2 class="mb-1">Connect to a server</h2>
       <div class="d-flex mb-6 align-center">
         <h3>Powered by</h3>
-        <img class="ml-2" width="75" src="../assets/express.png" />
+        <img class="ml-2" width="75" src="../assets/flask.png" />
       </div>
       <p>
-        This Vue frontend is connected to an Express server. Below is the
-        response message we receive when we ping the server:
+        This Vue frontend is connected to a Flask server. Below is the response
+        message we receive when we ping the server:
       </p>
       <p class="response px-1">> {{ response }}</p>
       <p>
@@ -24,7 +24,7 @@
         The <b>endpoint</b> that resets the ping counter is located in
         <code>
           <a :href="url" target="_blank" rel="noopener">
-            backend/src/routes/index.js</a
+            backend/src/routes/counter.py</a
           ></code
         >:
       </p>
@@ -51,11 +51,11 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism-tomorrow.css';
 
-const codeSnippet1 = `101 |  router.get('/api/v1/reset', async function (req, res, next) {
-102 |    const counters = await db.Counter.findAll();
-103 |    const count = await resetCounter(counters[0]);
-104 |    res.json({response: count})
-105 |  });`;
+const codeSnippet1 = `23 |    @blueprint.route('/api/v1/reset/')
+24 |    def reset():
+25 |        counter = Counter.get_create(label='Test')
+26 |        counter.reset()
+27 |        return jsonify(response=counter.count)`;
 
 export default {
   name: 'ConnectCard',
@@ -65,7 +65,7 @@ export default {
   data: () => ({
     response: '',
     codeSnippet1: codeSnippet1,
-    url: `${process.env.VUE_APP_STARTER_REPO_URL}backend/src/routes/index.js#L101-L105`
+    url: `${process.env.VUE_APP_STARTER_REPO_URL}backend/src/routes/counter.py#L23-L27`
   }),
   mounted() {
     this.fetchData();

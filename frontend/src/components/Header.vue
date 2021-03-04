@@ -20,7 +20,7 @@
         :href="url2"
         target="_blank"
         rel="noopener"
-        >Express</a
+        >Flask</a
       >-<a :href="url3" target="_blank" rel="noopener">Postgres</a>-<a
         :href="url4"
         target="_blank"
@@ -38,7 +38,7 @@ export default {
   data: () => ({
     logoUrl: `${process.env.VUE_APP_STARTER_REPO_URL}frontend/src/assets/logo.png`,
     url1: 'https://github.com/vuejs/vue',
-    url2: 'https://github.com/expressjs/express',
+    url2: 'https://github.com/pallets/flask',
     url3: 'https://github.com/postgres/postgres',
     url4: 'https://github.com/localstack/localstack'
   })
