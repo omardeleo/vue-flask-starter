@@ -5,11 +5,11 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '^/api': {
-        target: 'http://backend:8080',
+        target: 'http://backend:8080'
       },
       '^/test-bucket': {
-        target: 'http://localstack:4566',
-      },
-    },
-  },
+        target: 'http://localstack:4566'
+      }
+    }
+  }
 };
