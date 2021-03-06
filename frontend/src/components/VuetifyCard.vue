@@ -60,13 +60,13 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism-tomorrow.css';
 
-const codeSnippet1 = ` 7 |  <v-chip v-for="season of seasons" :key="season">
- 8 |    {{ season }}
- 9 |  </v-chip>`;
+const codeSnippet1 = ` 9 |  <v-chip v-for="season of seasons" :key="season">
+10 |    {{ season }}
+11 |  </v-chip>`;
 
-const codeSnippet2 = ` 7 |  <v-list-item v-for="season of seasons" :key="season">
- 8 |    {{ season }}
- 9 |  </v-list-item>`;
+const codeSnippet2 = ` 9 |  <v-list-item v-for="season of seasons" :key="season">
+10 |    {{ season }}
+11 |  </v-list-item>`;
 
 export default {
   name: 'VuetifyCard',
@@ -77,7 +77,7 @@ export default {
     seasons: ['Winter', 'Spring', 'Summer', 'Fall'],
     codeSnippet1: codeSnippet1,
     codeSnippet2: codeSnippet2,
-    url1: `${process.env.VUE_APP_STARTER_REPO_URL}frontend/src/components/VuetifyCard.vue#L7-L9`,
+    url1: `${process.env.VUE_APP_STARTER_REPO_URL}frontend/src/components/VuetifyCard.vue#L9-L11`,
     url2: 'https://vuetifyjs.com'
   }),
   methods: {
