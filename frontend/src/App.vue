@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import Header from './components/Header';
 import ThemeCard from './components/ThemeCard';
 import VuetifyCard from './components/VuetifyCard';
 import ReloadCard from './components/ReloadCard';
